@@ -1,0 +1,19 @@
+footer {
+  border-top: 2px solid #000;
+  width: 100%;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #333;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+
+  p {
+    color: #fff;
+    margin: 0 auto;
+    font-size: 11px;
+  }
+}
