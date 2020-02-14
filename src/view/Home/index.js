@@ -32,6 +32,7 @@ class Home extends Component {
     this.setState({ address: event.target.value })
   }
 
+  //Rua Américo Brasiliense, São Paulo
   handleSubmit = async (e) => {
     e.preventDefault()
 
