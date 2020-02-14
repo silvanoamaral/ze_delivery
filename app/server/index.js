@@ -12,7 +12,7 @@ const { deliveryLocation } = require('../modules/Location')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-app.use('/location', deliveryLocation)
+app.use('/api/location', deliveryLocation)
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('dist'))

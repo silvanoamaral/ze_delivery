@@ -12,7 +12,7 @@ class Home extends Component {
 
   callApi = async (address) => {
     try {
-      const response = await fetch(`/location?address=${address}`)
+      const response = await fetch(`/api/location?address=${address}`)
 
       if (response.status !== 200) {
         this.setState({ message: 'Erro ao buscar endereço, tente novamente.' })

@@ -1,29 +1,20 @@
 const path = require('path')
 
 module.exports = {
+  devtool: 'source-map',
   entry: {
     app: path.join(__dirname, '../src/index.js')
   },
   output: {
-    path: path.join(__dirname, '../dist'),
-    publicPath: '/',
-    filename: '[name].js'
+    filename: 'bundle.js',
+    path: path.join(__dirname, '/dist')
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { presets: [
-            "@babel/env",
-            {
-              plugins: [
-                '@babel/plugin-proposal-class-properties'
-              ]
-            }
-          ]
-        }
+        exclude: /node_modules/,
+        test: /\.js$/,
+        loader: 'babel-loader'
       },
       {
         exclude: /node_modules/,
