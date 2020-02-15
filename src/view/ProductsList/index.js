@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+import './Product.scss'
+import Card from '../../components/Card'
+
 class Product extends Component {
 
   componentDidMount() {
@@ -7,8 +10,18 @@ class Product extends Component {
   }
   
   render() {
+    const { data } = this.props.location.state
+
     return (
-      <h2>Product List</h2>
+      <main className="container product">
+        {data ?
+          data.products.map((product, i) => (
+            <Card product={product} key={i} />
+          ))
+          :
+          <p>Não encontramos produtos, realizar uma nova pesquisa</p>
+        }
+      </main>
     )
   }
 }
