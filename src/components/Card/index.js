@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import formatNumber from '../../utils/formatNumber'
 
@@ -22,3 +23,8 @@ const Card = props => {
 }
 
 export default Card
+
+Card.propTypes = {
+  props: PropTypes.object,
+  product: PropTypes.object
+}

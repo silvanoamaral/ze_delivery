@@ -1,21 +1,18 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import './Product.scss'
 import Card from '../../components/Card'
 
 class Product extends Component {
 
-  componentDidMount() {
-	  console.log(this.props.location.state)
-  }
-  
   render() {
-    const { data } = this.props.location.state
+    const { state } = this.props.location
 
     return (
       <main className="container product">
-        {data ?
-          data.products.map((product, i) => (
+        {state.data ?
+          state.data.products.map((product, i) => (
             <Card product={product} key={i} />
           ))
           :
@@ -27,3 +24,7 @@ class Product extends Component {
 }
 
 export default Product
+
+Product.propTypes = {
+  location: PropTypes.object
+}
