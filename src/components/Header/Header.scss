@@ -11,4 +11,16 @@ header {
       width: 100%;
     }
   }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon__bag {
+    svg {
+      width: 50px;
+      height: 38px;
+    }
+  }
 }

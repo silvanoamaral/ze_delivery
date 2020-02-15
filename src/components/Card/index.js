@@ -15,8 +15,9 @@ const Card = props => {
       <p className='title'>{ props.product.title }</p>
       <span className='price'>{formatNumber(props.product.productVariants[0].price)}</span>
 
-      <div className='add-item'>
-        <a className='add'>Adicionar</a>
+      <div className='add__item'>
+        <a onClick={() => props.addToCart(props.product.productVariants[0].price, props.product.title)}
+        >Adicionar</a>
       </div>
     </div>
   )
@@ -26,5 +27,6 @@ export default Card
 
 Card.propTypes = {
   props: PropTypes.object,
-  product: PropTypes.object
+  product: PropTypes.object,
+  addToCart: PropTypes.func
 }
