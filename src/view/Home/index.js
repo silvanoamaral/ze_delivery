@@ -77,5 +77,5 @@ class Home extends Component {
 export default Home
 
 Home.propTypes = {
-  history: PropTypes.string
+  history: PropTypes.object
 }
