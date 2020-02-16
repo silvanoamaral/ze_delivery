@@ -57,7 +57,7 @@ class Home extends Component {
 
   render() {
     return (
-      <section className='container'>
+      <section className='container home'>
         <h1>Seu delivery de bebidas geladas a preço baixo</h1>
         <h2>Para curtir a qualquer momento</h2>
         <form onSubmit={this.handleSubmit}>
