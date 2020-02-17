@@ -10,7 +10,8 @@
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run dev\" ",
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "test": "jest --coverage",
-    "test:watch": "npm test -- --watchAll --verbose"
+    "test:watch": "npm test -- --watchAll --verbose",
+    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -55,11 +56,13 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-hot-loader": "^4.3.11",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "serve": "^11.3.0"
   },
   "jest": {
     "moduleNameMapper": {
