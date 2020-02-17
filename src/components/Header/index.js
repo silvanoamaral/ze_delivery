@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import logo from '../../assets/images/logo.png'
@@ -13,7 +14,9 @@ const Header = props => {
     <header>
       <div className="container">
         <figure>
-          <img src={ logo } alt="Zé delivery logo" />
+          <Link to="/">
+            <img src={ logo } alt="Zé delivery logo" />
+          </Link>
         </figure>
         <div className="icon__bag">
           <span>{ qntItensCart }</span>
@@ -35,4 +38,3 @@ Header.propTypes = {
 }
 
 export default connect(mapStateToProps)(Header)
-

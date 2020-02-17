@@ -12,10 +12,10 @@ import '../../assets/style/index.scss'
 const App = () => {
   return (
     <>
-    <Header />
     <Router>
-      <Route path="/" exact component={Home} />
-      <Route path="/product" exact component={Product} />
+      <Header />
+      <Route path="/" exact component={ Home } />
+      <Route path="/product" exact component={ Product } />
     </Router>
     <Footer />
     </>
