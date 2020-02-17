@@ -11,8 +11,7 @@
     "start-sw": "http-server ./dist",
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "test": "jest --coverage",
-    "test:watch": "npm test -- --watchAll --verbose",
-    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
+    "test:watch": "npm test -- --watchAll --verbose"
   },
   "keywords": [],
   "author": "",
