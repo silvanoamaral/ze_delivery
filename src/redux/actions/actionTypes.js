@@ -1,0 +1,2 @@
+
+export const QNT_ITENS_CART = 'QNT_ITENS_CART'

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 import './Product.scss'
 import Card from '../../components/Card'
@@ -32,6 +33,9 @@ class Product extends Component {
       product: productData,
       openMiniCart: true
     })
+
+    const { dispatch } = this.props
+    dispatch({ type: 'QNT_ITENS_CART' })
   }
 
   handleCloseModal = () => {
@@ -63,8 +67,9 @@ class Product extends Component {
   }
 }
 
-export default Product
+export default connect()(Product)
 
 Product.propTypes = {
+  dispatch: PropTypes.func,
   location: PropTypes.object
 }
