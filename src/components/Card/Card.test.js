@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Card from './'
 
-describe('Card Component', () => {
+describe('Card component', () => {
   const props = {
     id: 1234,
     images: [{
@@ -16,11 +16,11 @@ describe('Card Component', () => {
 
   const wrapper = shallow(<Card product={ props } addToCart={ () => { return null } } />)
 
-  it('render component with the required props', () => {
+  it('Render component with the required props', () => {
     expect(wrapper.length).toEqual(1)
   })
 
-  it('simulates click events', () => {
+  it('Simulates click events', () => {
     wrapper.find('.add__item a').simulate('click')
   })
 })
