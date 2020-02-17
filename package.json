@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node app/server/index.js",
     "build": "webpack -p --config webpack/webpack.prod.js",
-    "dev": "webpack-dev-server --config webpack/webpack.dev.js",
+    "dev": "webpack-dev-server --config webpack/webpack.dev.js --open",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run dev\" ",
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "test": "jest --coverage",
