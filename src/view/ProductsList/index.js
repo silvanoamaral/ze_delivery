@@ -49,12 +49,14 @@ class Product extends Component {
 
     return (
       <main className="container product">
-        {state.data ?
+        {state ?
           state.data.products.map((product, i) => (
             <Card product={product} key={i} addToCart={this.addToCart} />
           ))
           :
-          <p>Não encontramos produtos, realizar uma nova pesquisa</p>
+          <div className="not__found">
+            <p>Não encontramos produtos, realizar uma nova pesquisa.</p>
+          </div>
         }
         <MiniCart
           total={ this.state.total }

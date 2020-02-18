@@ -1,8 +1,6 @@
 form {
   width: 100%;
-  max-width: 350px;
-  margin: 0 auto;
-  padding: 10px;
+  max-width: 430px;
   text-align: right;
 
   @media only screen and (max-width: 768px) { 
@@ -57,6 +55,12 @@ form {
 }
 
 .home {
+  padding: 55px;
+
+  h1 {
+    max-width: 500px;
+  }
+
   ~ footer {
     position: absolute;
     bottom: 0;

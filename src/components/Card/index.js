@@ -5,11 +5,15 @@ import formatNumber from '../../utils/formatNumber'
 
 import './Card.scss'
 
+const addDefaultSrc = (ev) => {
+  ev.target.src = 'http://placehold.it/400x400'
+}
+
 const Card = props => {
   return (
     <div className='product__card'>
       <div className='image'>
-        <img src={ props.product.images[0].url } />
+        <img src={ props.product.images[0].url } onError={ addDefaultSrc } />
       </div>
 
       <p className='title'>{ props.product.title }</p>
