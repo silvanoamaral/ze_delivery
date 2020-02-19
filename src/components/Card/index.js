@@ -2,12 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import formatNumber from '../../utils/formatNumber'
+import addDefaultSrc from '../../utils/addDefaultSrc'
 
 import './Card.scss'
-
-const addDefaultSrc = (ev) => {
-  ev.target.src = 'http://placehold.it/400x400'
-}
 
 const Card = props => {
   return (

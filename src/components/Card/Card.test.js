@@ -14,7 +14,8 @@ describe('Card component', () => {
     title: 'Skol 269ml - Pack com 15 Unidades'
   }
 
-  const wrapper = shallow(<Card product={ props } addToCart={ () => { return null } } />)
+  const addDefaultSrc = jest.fn()
+  const wrapper = shallow(<Card product={ props } addToCart={ () => { return null } } onError={ addDefaultSrc } />)
 
   it('Render component with the required props', () => {
     expect(wrapper.length).toEqual(1)
