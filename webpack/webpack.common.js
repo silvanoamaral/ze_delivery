@@ -5,9 +5,9 @@ module.exports = {
   entry: {
     app: path.join(__dirname, '../src/index.js')
   },
-  output: {
-    path: path.join(__dirname, '../dist'),
-    filename: 'bundle.js'
+  output: {    
+    filename: 'bundle.js',
+    path: path.join(__dirname, '../dist')
   },
   module: {
     rules: [
